@@ -1,76 +1,41 @@
-var CONST = require("./const");
+import * as CONST from './const.js'
 
-module.exports = {
-    title: 'Today Bammer Learned',
-    description: 'Github TIL Pages',
-    base: "/TIL/",
-    dest: 'build',
-    themeConfig: {
-        sidebar: [
-			{
-				title: 'MIL',
-				children: CONST.MILList
-			},
-			{
-					title: 'Algorithm',
-					children: CONST.AlgorithmList
-			},
-			{
-				title: 'Data Structure',
-				children: CONST.DataStructureList
-			},
-			{
-				title: 'Web',
-				childrend: CONST.WebList
-			},
-			{
-				title: 'Boolean Algebra',
-				children: CONST.BooleanAlgebraList
-			},
-			{
-					title: 'JavaScript',
-					children: CONST.JavaScriptList
-			},
-			{
-				title: 'Linux',
-				children: CONST.LinuxList
-			},
-			{
-				title: 'Web',
-				children: CONST.WebList
-			},
-			{
-				title: 'C++',
-				children: CONST.CppList
-			},
-			{
-				title: 'Python',
-				children: CONST.PythonList
-			},
-			{
-				title: 'PS',
-				children: CONST.PSList
-			},
-			{
-				title: 'Math',
-				children: CONST.MathList
-			},
-			/*
-			{
-				title: '뻘글',
-				children: CONST.GossipList
-			}
-			*/
-        ],
-		nav: [
-			{
-				text: 'GitHub',
-				link: 'https://github.com/jhcse5189/'
-			},
-			{
-				text: 'Blog',
-				link: 'https://jhcse5189.github.io/'
-			}
-		]
-    },
-}
+import { viteBundler } from '@vuepress/bundler-vite'
+import { defaultTheme } from '@vuepress/theme-default'
+import { defineUserConfig } from 'vuepress'
+
+export default defineUserConfig({
+	title: 'Today Bammer Learned',
+	description: 'Github TIL Pages',
+	base: "/TIL/",
+	dest: 'build',
+	lang: 'ko-KR',
+
+	// Bundler
+  bundler: viteBundler({
+    viteOptions: {},
+    vuePluginOptions: {},
+  }),
+
+	// Theme
+  theme: defaultTheme({
+    logo: '',
+		navbar: [
+      { text: 'GitHub', link: 'https://github.com/call-me-bammer/' },
+      { text: 'Blog', link: 'https://call-me-bammer.github.io/' }
+    ],
+		sidebar: [
+      { text: 'MIL', children: CONST.MILList },
+      { text: 'Algorithm', children: CONST.AlgorithmList },
+      { text: 'Data Structure', children: CONST.DataStructureList },
+      { text: 'Web', children: CONST.WebList },
+      { text: 'Boolean Algebra', children: CONST.BooleanAlgebraList },
+      { text: 'JavaScript', children: CONST.JavaScriptList },
+      { text: 'Linux', children: CONST.LinuxList },
+      { text: 'C++', children: CONST.CppList },
+      { text: 'Python', children: CONST.PythonList },
+      { text: 'PS', children: CONST.PSList },
+      { text: 'Math', children: CONST.MathList },
+    ],
+  }),
+})

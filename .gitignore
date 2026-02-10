@@ -2,3 +2,7 @@
 /build
 /docs/Deprecated
 goorm.manifest
+
+# VuePress 2
+.vuepress/.temp
+.vuepress/.cache

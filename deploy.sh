@@ -16,7 +16,7 @@ git init
 git add -A
 git commit -m 'shell script deploy'
 
-git push -f https://github.com/jhcse5189/TIL.git master:gh-pages
+git push -f https://github.com/call-me-bammer/TIL.git master:gh-pages
 
 cd -
 

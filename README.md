@@ -1,30 +1,25 @@
 # Today I Learned
 
-https://jhcse5189.github.io/TIL/
+https://call-me-bammer.github.io/TIL/
 
-### Environment (as of 22.10.05)
+### Environment (as of 26.02.10)
 ```
-$ lsb_release -a
-Description:    Ubuntu 20.04 LTS
-$ sudo apt-get install -y nodejs
+$ sw_vers
+ProductName:            macOS
+ProductVersion:         15.0.1
+BuildVersion:           24A348
 $ node -v
-v18.10.0
+v24.13.0
 $ npm -v
-8.19.2
+11.6.2
 ```
 
-### Build locally (as of 22.10.04)
+### Build locally (as of 26.02.10)
 
 ```
-$ sudo apt install nodejs
-$ node -v
-v10.19.0
-$ sudo apt install npm
-$ npm -v
-6.14.4
-$ sudo npm install -g yarn
+$ brew install yarn
 $ yarn -v
-1.22.19
+1.22.22
 $ yarn add -D vuepress
 $ yarn docs:dev
 ```
@@ -51,8 +46,10 @@ https://github.com/webpack/webpack/issues/14532
 
 - [x] Authentication failed for remote setting
 ```
-$ git remote set-url origin https://jhcse5189:{token}@github.com/jhcse5189/TIL/
+$ git remote set-url origin https://call-me-bammer:{token}@github.com/call-me-bammer/TIL/
 ```
+
+- [ ] Node 24 openssl 3.0 Webpack 4 issue
 
 ### Progress
 
